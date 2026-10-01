@@ -5,7 +5,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Build Docker Image"
-                bat "docker build -t kubdemoapp:v1 ."
+                bat "docker build -t mypythonflaskapp:v1 ."
             }
         }
         stage('Docker Login') {
@@ -16,7 +16,7 @@ pipeline {
         stage('push Docker Image to Docker Hub') {
             steps {
                 echo "push Docker Image to Docker Hub"
-                bat "docker tag kubdemoapp:v1 swathi1276/week8:latest"               
+                bat "docker tag mypythonflaskapp:v1 swathi1276/week8:latest"               
                     
                 bat "docker push swathi1276/week8:latest"
                 
