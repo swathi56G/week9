@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:mypythonflaskapp-deployment
+  name: mypythonflaskapp-deployment
 spec:
   replicas: 4
   selector:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: mypythonflaskapp
-          image: swathi1276/week8:latest # use your Docker Hub image
+          image: swathi1276/week8:latest
           ports:
             - containerPort: 5000
