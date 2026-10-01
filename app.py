@@ -13,7 +13,7 @@ def register():
     email = request.form['email']
     year = request.form['year']
 
-    return render_template('Successful.html', name=name, student_id=student_id, email=email, year=year)
+    return render_template('Success.html', name=name, student_id=student_id, email=email, year=year)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
